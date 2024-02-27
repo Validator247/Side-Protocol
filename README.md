@@ -118,6 +118,10 @@ Delegate to your validator
 Unjail
 
     sided tx slashing unjail --from wallet--chain-id side-testnet-2 --gas auto --fees 1000uside -y
+
+Delete node
+
+        sudo systemctl stop sided && sudo systemctl disable sided && sudo rm /etc/systemd/system/sided.service && sudo systemctl daemon-reload && rm -rf $HOME/.side && rm -rf $HOME/.sidechain && rm -rf sidechain && rm -rf rebus.core && sudo rm -rf $(which sided)
             
     
     
