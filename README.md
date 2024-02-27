@@ -60,7 +60,7 @@ Create Service
     sudo systemctl daemon-reload
     sudo systemctl enable sided
 
-Download Snapshot(optional)
+Download Snapshot
 
     SNAP_NAME=$(curl -s https://ss-t.side.nodestake.org/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
     curl -o - -L https://ss-t.side.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar -x -C $HOME/.side
