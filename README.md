@@ -74,7 +74,7 @@ Check syn: False
 
     sided status 2>&1 | jq .SyncInfo.catching_up
 
-Add New Wallet Key
+Create New Wallet
 
     sided keys add wallet
 
@@ -111,7 +111,7 @@ Query Wallet Balance
         --gas-adjustment=1.5 \
         --gas=auto \
         -y
-Delegate Token to your own validator
+Delegate to your validator
 
     sided tx staking delegate $(sided keys show wallet --bech val -a) 1000000uside --from wallet --chain-id side-testnet-2 --gas-prices 0.5uside --gas-adjustment 1.5 --gas auto -y
 
