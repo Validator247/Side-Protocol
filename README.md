@@ -26,13 +26,13 @@ Install Node
     rm -rf sidechain
     git clone -b dev https://github.com/sideprotocol/sidechain.git
     cd sidechain
-    git checkout v0.6.0
+    git checkout v0.7.0
     make install
     sided version
 
 Initialize Node: Replace NodeName with your own moniker.
 
-    sided init NodeName --chain-id=side-testnet-2
+    sided init NodeName --chain-id=side-testnet-3
 
 Download Genesis
 
@@ -90,7 +90,7 @@ Query Wallet Balance
      --moniker="Your_moniker" \
      --identity=your_id_keybase  \
      --details="your_info" \
-     --chain-id="side-testnet-2" \
+     --chain-id="side-testnet-3" \
      --commission-rate="0.10" \
      --commission-max-rate="0.20" \
      --commission-max-change-rate="0.01" \
@@ -105,7 +105,7 @@ Query Wallet Balance
         --identity=new_identity \
         --details="new_info" \
         --website="your_website" \
-        --chain-id=side-testnet-2 \
+        --chain-id=side-testnet-3 \
         --from=wallet \
         --gas-prices=0.5uside \
         --gas-adjustment=1.5 \
@@ -113,7 +113,7 @@ Query Wallet Balance
         -y
 Delegate to your validator
 
-    sided tx staking delegate $(sided keys show wallet --bech val -a) 1000000uside --from wallet --chain-id side-testnet-2 --gas-prices 0.5uside --gas-adjustment 1.5 --gas auto -y
+    sided tx staking delegate $(sided keys show wallet --bech val -a) 1000000uside --from wallet --chain-id side-testnet-3 --gas-prices 0.5uside --gas-adjustment 1.5 --gas auto -y
 
 Unjail
 
