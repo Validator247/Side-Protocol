@@ -122,6 +122,12 @@ Unjail
 Delete node
 
         sudo systemctl stop sided && sudo systemctl disable sided && sudo rm /etc/systemd/system/sided.service && sudo systemctl daemon-reload && rm -rf $HOME/.side && rm -rf $HOME/.sidechain && rm -rf sidechain && rm -rf rebus.core && sudo rm -rf $(which sided)
+
+Send Token
+
+        sided tx bank send wallet <Receive_wallet> <Amout>uside --chain-id side-testnet-3 --gas-prices 0.5uside --gas-adjustment 1.5 --gas auto -y
+
+                
             
     
     
